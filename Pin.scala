@@ -99,42 +99,72 @@ object Example {
 }
 
 /*
- graph TD
-    %% Main diagram
-    subgraph Flow
-        direction TB
-        etl["ETL"]
-        basic-etl["Basic ETL"]
-        advanced-etl["Advanced ETL"]
-        db[(Database)]
-        storage[("Storage")]
-        
-        %% Relationships - without labels
-        etl --> basic-etl
-        basic-etl --> advanced-etl
-        etl --> advanced-etl
-        
-        %% Read/Write operations - without labels
-        basic-etl -.-> db
-        advanced-etl -.-> storage
-        etl ==> storage
-    end
+digraph ETL {
+  # Default styling
+  node [shape=box];
+  edge [dir=forward];
+  #rankdir=LR;
+  
+  subgraph cluster_0 {
+    label = "Trading Data Pipeline";
+    style=filled;
+    color=lightgrey;
     
-    %% Style defs
-    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px
-    classDef storage fill:#ffebcc,stroke:#f90
-    classDef database fill:#e6f3ff,stroke:#0066cc
+    trades_raw [shape=cylinder, label="trades_raw\nS3"];
+    trades_processed [shape=cylinder, label="trades_processed\nS3", style=filled, fillcolor=peachpuff];
+    trades_aggregated [shape=cylinder, label="trades_aggregated\nPostgres"];
     
-    %% Styles
-    class storage storage
-    class db database
+    process_trades [label=<process_trades<BR/><FONT COLOR="#FF69B4" POINT-SIZE="10"><I>every 10m</I></FONT>>, style=filled, fillcolor=cyan2];
+    aggregate_trades [label=<<B>aggregate_trades</B><BR/><FONT COLOR="#FF69B4" POINT-SIZE="10"><I>hourly</I></FONT>>];
     
-    %% Legend
-    subgraph Legend
-        direction LR
-        l1[Process Node] --- l2[(Database)] --- l3[("Storage")]
-        l4[" "] --->|"depends on"| l5[" "]
-        l6[" "] -.->|"reads from"| l7[" "]
-        l8[" "] ==>|"writes to"| l9[" "]
-    end
+    trades_raw -> process_trades -> trades_processed -> aggregate_trades -> trades_aggregated;
+  }
+  
+  subgraph cluster_1 {
+    label = "Market Data Pipeline";
+    color=blue;
+    
+    market_feed [shape=cylinder, label="market_feed\nKafka"];
+    market_processed [shape=cylinder, label="market_processed\nS3"];
+    market_analytics [shape=cylinder, label="market_analytics\nRedshift"];
+    
+    ingest_market [label=<<B>ingest_market</B><BR/><FONT COLOR="#FF69B4" POINT-SIZE="10"><I>every 1m</I></FONT>>];
+    analyze_market [label=<<B>analyze_market</B><BR/><FONT COLOR="#FF69B4" POINT-SIZE="10"><I>daily @ 00:00</I></FONT>>];
+    
+    market_feed -> ingest_market -> market_processed -> analyze_market -> market_analytics;
+  }
+
+  subgraph cluster_2 {
+    label = "Reference Data Pipeline";
+    color=green;
+    
+    ref_api [shape=cylinder, label="reference_api\nREST"];
+    ref_raw [shape=cylinder, label="reference_raw\nS3"];
+    ref_processed [shape=cylinder, label="reference_db\nPostgres"];
+    
+    fetch_ref [label=<<B>fetch_reference</B><BR/><FONT COLOR="#FF69B4" POINT-SIZE="10"><I>daily @ 08:00</I></FONT>>];
+    process_ref [label=<<B>process_reference</B><BR/><FONT COLOR="#FF69B4" POINT-SIZE="10"><I>daily @ 09:00</I></FONT>>];
+    
+    ref_api -> fetch_ref -> ref_raw -> process_ref -> ref_processed;
+  }
+
+  subgraph cluster_3 {
+    label = "Analytics Pipeline";
+    color=purple;
+    
+    analytics_raw [shape=cylinder, label="analytics_raw\nKafka"];
+    analytics_processed [shape=cylinder, label="analytics_dw\nSnowflake"];
+    
+    process_analytics [label=<<B>process_analytics</B><BR/><FONT COLOR="#FF69B4" POINT-SIZE="10"><I>hourly</I></FONT>>];
+    
+    analytics_raw -> process_analytics -> analytics_processed;
+  }
+  
+  # Cross-pipeline dependencies
+  trades_processed -> analyze_market;
+  ref_processed -> process_trades;
+  ref_processed -> analyze_market;
+  trades_aggregated -> process_analytics;
+  market_analytics -> process_analytics;
+ }
  */

@@ -2,7 +2,7 @@
 //> using scala "2.13"
 
 //> using publish.name "pin"
-//> using publish.organization "io.github.mattlianje"
+//> using publish.organization "xyz.matthieucourt"
 //> using publish.version "0.0.1"
 //> using publish.url "https://github.com/mattlianje/pin"
 //> using publish.vcs "github:mattlianje/pin"
