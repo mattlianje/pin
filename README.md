@@ -67,7 +67,7 @@ Stick `@pin` and/or `@subgraph` decorators in your Scala code. Compile it, get a
 
 This represents a synthetic production codebase. You have a bunch of data-models mapped to storage engines, and processing functions.
 
-Developers often work on one part, without knowing what goes on in the others.
+Developers will often work on one part, without knowing what goes on in the others.
 
 Drop a few pins, and you have the beautiful GraphViz above.
 ```scala
