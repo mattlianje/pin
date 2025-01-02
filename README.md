@@ -70,7 +70,7 @@ This represents a synthetic med/large production codebase. You have a bunch of d
 
 Developers will often work on one part, without knowing what goes on in the others.
 
-Drop a few pins, and you have the beautiful diagram above of your entire Org's dataflow.
+Drop a few pins, and you have the beautiful diagram above of your org's dataflow.
 ```scala
 import pin.core._
 
