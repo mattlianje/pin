@@ -11,7 +11,7 @@ Pin metadata to Scala objects, get beautiful Graphviz [DOT](https://graphviz.org
 - Rich GraphViz options for shapes, colors, and styling
 
 ## Core Concepts
-Add `@pin`s / `@subgraph`s to your Scala code. Compile it, get a Graphviz diagram. One step, that's it.
+Add `@pin` and `@subgraph` decorators to your Scala code. Compile it, get a Graphviz diagram. One step, that's it.
 
 ## `@pin` options
 
