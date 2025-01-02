@@ -10,7 +10,10 @@ Pin metadata to Scala objects, get beautiful GraphViz [DOT](https://graphviz.org
 - Drop **Pin.scala** into your project and start documenting
 - Rich GraphViz options for shapes, colors, and styling
 
+This code
 ```scala
+import pin.core._
+
 `@subgraph`("data", label = Some("Data Org"))
 `@subgraph`("infra", label = Some("Infra Team"), parent=Some("data"))
 
@@ -25,6 +28,10 @@ def analyze(d: Data): Stats = ???
        subgraph=Some("data")){}
 case class Stats(mean: Double)
 ```
+
+Generates this DOT:
+<img src="pix/pin-example.svg">
+
 ## Core Concepts
 Stick `@pin` and/or `@subgraph` decorators in your Scala code. Compile it, get a Graphviz diagram. One step, that's it.
 
