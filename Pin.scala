@@ -164,7 +164,6 @@ object core {
   }
 }
 
-
 /* A good example ...
 digraph ETL {
   node [shape=box];

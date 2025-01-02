@@ -36,3 +36,5 @@ Stick `@pin` and/or `@subgraph` decorators in your Scala code. Compile it, get a
 | dotOptions | Map[String,String] | GraphViz cluster attributes | `Map("style" -> "filled")` |
 | parent | Option[String] | Parent subgraph for nesting | `Some("parent_graph")` |
 
+## Real-World Example
+<img src="pix/pin-real-world-lr.svg">

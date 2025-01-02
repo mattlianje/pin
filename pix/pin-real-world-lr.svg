@@ -1,0 +1,277 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1450pt" height="388pt" viewBox="0.00 0.00 1449.81 388.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 384)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-384 1445.81,-384 1445.81,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_reference</title>
+<polygon fill="none" stroke="black" points="8,-101 8,-186 530.95,-186 530.95,-101 8,-101"/>
+<text text-anchor="middle" x="269.48" y="-169.4" font-family="Times,serif" font-size="14.00">Reference Data Pipeline</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_market</title>
+<polygon fill="oldlace" stroke="oldlace" points="425.1,-8 425.1,-93 1116,-93 1116,-8 425.1,-8"/>
+<text text-anchor="middle" x="770.55" y="-76.4" font-family="Times,serif" font-size="14.00">Market Data Pipeline</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_trading</title>
+<polygon fill="#d9d9d9" stroke="#d9d9d9" points="429.38,-194 429.38,-279 1119.11,-279 1119.11,-194 429.38,-194"/>
+<text text-anchor="middle" x="774.24" y="-262.4" font-family="Times,serif" font-size="14.00">Trading Data Pipeline</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_analytics</title>
+<polygon fill="none" stroke="#912cee" points="997.32,-287 997.32,-372 1433.81,-372 1433.81,-287 997.32,-287"/>
+<text text-anchor="middle" x="1215.56" y="-355.4" font-family="Times,serif" font-size="14.00">Analytics Pipeline</text>
+</g>
+<!-- fetch_ref -->
+<g id="node1" class="node">
+<title>fetch_ref</title>
+<polygon fill="#a4d3ee" stroke="black" points="181.17,-149 107.64,-149 107.64,-113 181.17,-113 181.17,-149"/>
+<text text-anchor="start" x="119.15" y="-131.4" font-family="Times,serif" font-size="14.00">fetch_ref</text>
+<text text-anchor="start" x="115.64" y="-121" font-family="Times,serif" font-style="italic" font-size="10.00" fill="#ff69b4">daily @ 08:00</text>
+</g>
+<!-- ref_raw -->
+<g id="node5" class="node">
+<title>ref_raw</title>
+<path fill="none" stroke="black" d="M276.69,-149C276.69,-151.21 263.35,-153 246.93,-153 230.51,-153 217.17,-151.21 217.17,-149 217.17,-149 217.17,-113 217.17,-113 217.17,-110.79 230.51,-109 246.93,-109 263.35,-109 276.69,-110.79 276.69,-113 276.69,-113 276.69,-149 276.69,-149"/>
+<path fill="none" stroke="black" d="M276.69,-149C276.69,-146.79 263.35,-145 246.93,-145 230.51,-145 217.17,-146.79 217.17,-149"/>
+<text text-anchor="start" x="225.17" y="-131.4" font-family="Times,serif" font-size="14.00">ref_raw</text>
+<text text-anchor="start" x="241.65" y="-121" font-family="Times,serif" font-size="10.00">S3</text>
+</g>
+<!-- fetch_ref&#45;&gt;ref_raw -->
+<g id="edge4" class="edge">
+<title>fetch_ref-&gt;ref_raw</title>
+<path fill="none" stroke="black" d="M181.41,-131C189.21,-131 197.51,-131 205.46,-131"/>
+<polygon fill="black" stroke="black" points="205.26,-134.5 215.26,-131 205.26,-127.5 205.26,-134.5"/>
+</g>
+<!-- ref_api -->
+<g id="node2" class="node">
+<title>ref_api</title>
+<path fill="none" stroke="black" d="M71.64,-149C71.64,-151.21 59.17,-153 43.82,-153 28.47,-153 16,-151.21 16,-149 16,-149 16,-113 16,-113 16,-110.79 28.47,-109 43.82,-109 59.17,-109 71.64,-110.79 71.64,-113 71.64,-113 71.64,-149 71.64,-149"/>
+<path fill="none" stroke="black" d="M71.64,-149C71.64,-146.79 59.17,-145 43.82,-145 28.47,-145 16,-146.79 16,-149"/>
+<text text-anchor="start" x="24" y="-131.4" font-family="Times,serif" font-size="14.00">ref_api</text>
+<text text-anchor="start" x="31.6" y="-121" font-family="Times,serif" font-size="10.00">REST</text>
+</g>
+<!-- ref_api&#45;&gt;fetch_ref -->
+<g id="edge12" class="edge">
+<title>ref_api-&gt;fetch_ref</title>
+<path fill="none" stroke="black" d="M72.02,-131C79.46,-131 87.74,-131 95.96,-131"/>
+<polygon fill="black" stroke="black" points="95.92,-134.5 105.92,-131 95.92,-127.5 95.92,-134.5"/>
+</g>
+<!-- ref_processed -->
+<g id="node3" class="node">
+<title>ref_processed</title>
+<path fill="none" stroke="black" d="M522.95,-149C522.95,-151.21 501.95,-153 476.08,-153 450.22,-153 429.21,-151.21 429.21,-149 429.21,-149 429.21,-113 429.21,-113 429.21,-110.79 450.22,-109 476.08,-109 501.95,-109 522.95,-110.79 522.95,-113 522.95,-113 522.95,-149 522.95,-149"/>
+<path fill="none" stroke="black" d="M522.95,-149C522.95,-146.79 501.95,-145 476.08,-145 450.22,-145 429.21,-146.79 429.21,-149"/>
+<text text-anchor="start" x="437.21" y="-131.4" font-family="Times,serif" font-size="14.00">ref_processed</text>
+<text text-anchor="start" x="459.14" y="-121" font-family="Times,serif" font-size="10.00">Postgres</text>
+</g>
+<!-- analyze_market -->
+<g id="node9" class="node">
+<title>analyze_market</title>
+<polygon fill="#a4d3ee" stroke="black" points="954.16,-58 849.55,-58 849.55,-22 954.16,-22 954.16,-58"/>
+<text text-anchor="start" x="857.55" y="-40.4" font-family="Times,serif" font-size="14.00">analyze_market</text>
+<text text-anchor="start" x="873.09" y="-30" font-family="Times,serif" font-style="italic" font-size="10.00" fill="#ff69b4">daily @ 00:00</text>
+</g>
+<!-- ref_processed&#45;&gt;analyze_market -->
+<g id="edge13" class="edge">
+<title>ref_processed-&gt;analyze_market</title>
+<path fill="none" stroke="black" d="M523.32,-124.3C588.04,-114.48 709.12,-94.56 810.44,-69 819.51,-66.71 829.01,-64.01 838.3,-61.19"/>
+<polygon fill="black" stroke="black" points="839.11,-64.61 847.62,-58.3 837.03,-57.92 839.11,-64.61"/>
+</g>
+<!-- process_trades -->
+<g id="node12" class="node">
+<title>process_trades</title>
+<polygon fill="#a4d3ee" stroke="black" points="657.37,-242 558.95,-242 558.95,-206 657.37,-206 657.37,-242"/>
+<text text-anchor="start" x="566.95" y="-224.4" font-family="Times,serif" font-size="14.00">process_trades</text>
+<text text-anchor="start" x="587.48" y="-214" font-family="Times,serif" font-style="italic" font-size="10.00" fill="#ff69b4">every 11m</text>
+</g>
+<!-- ref_processed&#45;&gt;process_trades -->
+<g id="edge14" class="edge">
+<title>ref_processed-&gt;process_trades</title>
+<path fill="none" stroke="black" d="M507.58,-152.8C527.03,-166.71 552.28,-184.76 572.49,-199.21"/>
+<polygon fill="black" stroke="black" points="570.27,-201.92 580.44,-204.89 574.34,-196.23 570.27,-201.92"/>
+</g>
+<!-- process_ref -->
+<g id="node4" class="node">
+<title>process_ref</title>
+<polygon fill="#a4d3ee" stroke="black" points="393.21,-149 312.69,-149 312.69,-113 393.21,-113 393.21,-149"/>
+<text text-anchor="start" x="320.69" y="-131.4" font-family="Times,serif" font-size="14.00">process_ref</text>
+<text text-anchor="start" x="324.19" y="-121" font-family="Times,serif" font-style="italic" font-size="10.00" fill="#ff69b4">daily @ 09:00</text>
+</g>
+<!-- process_ref&#45;&gt;ref_processed -->
+<g id="edge10" class="edge">
+<title>process_ref-&gt;ref_processed</title>
+<path fill="none" stroke="black" d="M393.62,-131C401.31,-131 409.51,-131 417.64,-131"/>
+<polygon fill="black" stroke="black" points="417.51,-134.5 427.51,-131 417.51,-127.5 417.51,-134.5"/>
+</g>
+<!-- ref_raw&#45;&gt;process_ref -->
+<g id="edge15" class="edge">
+<title>ref_raw-&gt;process_ref</title>
+<path fill="none" stroke="black" d="M277.18,-131C284.62,-131 292.82,-131 300.99,-131"/>
+<polygon fill="black" stroke="black" points="300.93,-134.5 310.93,-131 300.93,-127.5 300.93,-134.5"/>
+</g>
+<!-- ingest_market -->
+<g id="node6" class="node">
+<title>ingest_market</title>
+<polygon fill="#a4d3ee" stroke="black" points="655.82,-56 560.5,-56 560.5,-20 655.82,-20 655.82,-56"/>
+<text text-anchor="start" x="568.5" y="-38.4" font-family="Times,serif" font-size="14.00">ingest_market</text>
+<text text-anchor="start" x="589.98" y="-28" font-family="Times,serif" font-style="italic" font-size="10.00" fill="#ff69b4">every 1m</text>
+</g>
+<!-- market_processed -->
+<g id="node10" class="node">
+<title>market_processed</title>
+<path fill="none" stroke="black" d="M810.44,-56C810.44,-58.21 784.2,-60 751.9,-60 719.6,-60 693.37,-58.21 693.37,-56 693.37,-56 693.37,-20 693.37,-20 693.37,-17.79 719.6,-16 751.9,-16 784.2,-16 810.44,-17.79 810.44,-20 810.44,-20 810.44,-56 810.44,-56"/>
+<path fill="none" stroke="black" d="M810.44,-56C810.44,-53.79 784.2,-52 751.9,-52 719.6,-52 693.37,-53.79 693.37,-56"/>
+<text text-anchor="start" x="701.37" y="-38.4" font-family="Times,serif" font-size="14.00">market_processed</text>
+<text text-anchor="start" x="746.62" y="-28" font-family="Times,serif" font-size="10.00">S3</text>
+</g>
+<!-- ingest_market&#45;&gt;market_processed -->
+<g id="edge5" class="edge">
+<title>ingest_market-&gt;market_processed</title>
+<path fill="none" stroke="black" d="M655.96,-38C664.21,-38 672.94,-38 681.64,-38"/>
+<polygon fill="black" stroke="black" points="681.51,-41.5 691.51,-38 681.51,-34.5 681.51,-41.5"/>
+</g>
+<!-- market_analytics -->
+<g id="node7" class="node">
+<title>market_analytics</title>
+<path fill="none" stroke="black" d="M1108,-56C1108,-58.21 1082.99,-60 1052.19,-60 1021.39,-60 996.38,-58.21 996.38,-56 996.38,-56 996.38,-20 996.38,-20 996.38,-17.79 1021.39,-16 1052.19,-16 1082.99,-16 1108,-17.79 1108,-20 1108,-20 1108,-56 1108,-56"/>
+<path fill="none" stroke="black" d="M1108,-56C1108,-53.79 1082.99,-52 1052.19,-52 1021.39,-52 996.38,-53.79 996.38,-56"/>
+<text text-anchor="start" x="1004.38" y="-38.4" font-family="Times,serif" font-size="14.00">market_analytics</text>
+<text text-anchor="start" x="1035.25" y="-28" font-family="Times,serif" font-size="10.00">Redshift</text>
+</g>
+<!-- process_analytics -->
+<g id="node17" class="node">
+<title>process_analytics</title>
+<polygon fill="#a4d3ee" stroke="black" points="1261.85,-333 1147.11,-333 1147.11,-297 1261.85,-297 1261.85,-333"/>
+<text text-anchor="start" x="1155.11" y="-315.4" font-family="Times,serif" font-size="14.00">process_analytics</text>
+<text text-anchor="start" x="1191.42" y="-305" font-family="Times,serif" font-style="italic" font-size="10.00" fill="#ff69b4">hourly</text>
+</g>
+<!-- market_analytics&#45;&gt;process_analytics -->
+<g id="edge6" class="edge">
+<title>market_analytics-&gt;process_analytics</title>
+<path fill="none" stroke="black" d="M1065.23,-60.2C1092.39,-110.25 1158.35,-231.82 1188.27,-286.97"/>
+<polygon fill="black" stroke="black" points="1185.02,-288.32 1192.86,-295.44 1191.17,-284.98 1185.02,-288.32"/>
+</g>
+<!-- market_feed -->
+<g id="node8" class="node">
+<title>market_feed</title>
+<path fill="none" stroke="black" d="M519.06,-56C519.06,-58.21 499.8,-60 476.08,-60 452.37,-60 433.1,-58.21 433.1,-56 433.1,-56 433.1,-20 433.1,-20 433.1,-17.79 452.37,-16 476.08,-16 499.8,-16 519.06,-17.79 519.06,-20 519.06,-20 519.06,-56 519.06,-56"/>
+<path fill="none" stroke="black" d="M519.06,-56C519.06,-53.79 499.8,-52 476.08,-52 452.37,-52 433.1,-53.79 433.1,-56"/>
+<text text-anchor="start" x="441.1" y="-38.4" font-family="Times,serif" font-size="14.00">market_feed</text>
+<text text-anchor="start" x="463.87" y="-28" font-family="Times,serif" font-size="10.00">Kafka</text>
+</g>
+<!-- market_feed&#45;&gt;ingest_market -->
+<g id="edge7" class="edge">
+<title>market_feed-&gt;ingest_market</title>
+<path fill="none" stroke="black" d="M519.32,-38C528.7,-38 538.81,-38 548.71,-38"/>
+<polygon fill="black" stroke="black" points="548.67,-41.5 558.67,-38 548.67,-34.5 548.67,-41.5"/>
+</g>
+<!-- analyze_market&#45;&gt;market_analytics -->
+<g id="edge3" class="edge">
+<title>analyze_market-&gt;market_analytics</title>
+<path fill="none" stroke="black" d="M954.32,-39.31C964.11,-39.17 974.48,-39.03 984.66,-38.9"/>
+<polygon fill="black" stroke="black" points="984.56,-42.4 994.51,-38.76 984.46,-35.4 984.56,-42.4"/>
+</g>
+<!-- market_processed&#45;&gt;analyze_market -->
+<g id="edge8" class="edge">
+<title>market_processed-&gt;analyze_market</title>
+<path fill="none" stroke="black" d="M810.53,-38.78C819.54,-38.9 828.9,-39.03 838.02,-39.15"/>
+<polygon fill="black" stroke="black" points="837.85,-42.65 847.9,-39.28 837.94,-35.65 837.85,-42.65"/>
+</g>
+<!-- trades_aggregated -->
+<g id="node11" class="node">
+<title>trades_aggregated</title>
+<path fill="none" stroke="black" d="M1111.11,-242C1111.11,-244.21 1084.7,-246 1052.19,-246 1019.68,-246 993.27,-244.21 993.27,-242 993.27,-242 993.27,-206 993.27,-206 993.27,-203.79 1019.68,-202 1052.19,-202 1084.7,-202 1111.11,-203.79 1111.11,-206 1111.11,-206 1111.11,-242 1111.11,-242"/>
+<path fill="none" stroke="black" d="M1111.11,-242C1111.11,-239.79 1084.7,-238 1052.19,-238 1019.68,-238 993.27,-239.79 993.27,-242"/>
+<text text-anchor="start" x="1001.27" y="-224.4" font-family="Times,serif" font-size="14.00">trades_aggregated</text>
+<text text-anchor="start" x="1035.24" y="-214" font-family="Times,serif" font-size="10.00">Postgres</text>
+</g>
+<!-- trades_aggregated&#45;&gt;process_analytics -->
+<g id="edge16" class="edge">
+<title>trades_aggregated-&gt;process_analytics</title>
+<path fill="none" stroke="black" d="M1089.57,-246.03C1111.82,-259.5 1140.31,-276.75 1163.23,-290.63"/>
+<polygon fill="black" stroke="black" points="1161.34,-293.58 1171.71,-295.76 1164.97,-287.59 1161.34,-293.58"/>
+</g>
+<!-- trades_processed -->
+<g id="node13" class="node">
+<title>trades_processed</title>
+<path fill="none" stroke="black" d="M807.72,-242C807.72,-244.21 782.7,-246 751.9,-246 721.1,-246 696.09,-244.21 696.09,-242 696.09,-242 696.09,-206 696.09,-206 696.09,-203.79 721.1,-202 751.9,-202 782.7,-202 807.72,-203.79 807.72,-206 807.72,-206 807.72,-242 807.72,-242"/>
+<path fill="none" stroke="black" d="M807.72,-242C807.72,-239.79 782.7,-238 751.9,-238 721.1,-238 696.09,-239.79 696.09,-242"/>
+<text text-anchor="start" x="704.09" y="-224.4" font-family="Times,serif" font-size="14.00">trades_processed</text>
+<text text-anchor="start" x="746.62" y="-214" font-family="Times,serif" font-size="10.00">S3</text>
+</g>
+<!-- process_trades&#45;&gt;trades_processed -->
+<g id="edge11" class="edge">
+<title>process_trades-&gt;trades_processed</title>
+<path fill="none" stroke="black" d="M657.54,-224C666.23,-224 675.41,-224 684.5,-224"/>
+<polygon fill="black" stroke="black" points="684.4,-227.5 694.4,-224 684.4,-220.5 684.4,-227.5"/>
+</g>
+<!-- trades_processed&#45;&gt;analyze_market -->
+<g id="edge18" class="edge">
+<title>trades_processed-&gt;analyze_market</title>
+<path fill="none" stroke="black" d="M770.75,-201.81C797.96,-167.97 849.74,-103.57 879.1,-67.05"/>
+<polygon fill="black" stroke="black" points="881.57,-69.57 885.11,-59.58 876.12,-65.18 881.57,-69.57"/>
+</g>
+<!-- aggregate_trades -->
+<g id="node15" class="node">
+<title>aggregate_trades</title>
+<polygon fill="#a4d3ee" stroke="black" points="957.27,-242 846.44,-242 846.44,-206 957.27,-206 957.27,-242"/>
+<text text-anchor="start" x="854.44" y="-224.4" font-family="Times,serif" font-size="14.00">aggregate_trades</text>
+<text text-anchor="start" x="888.8" y="-214" font-family="Times,serif" font-style="italic" font-size="10.00" fill="#ff69b4">hourly</text>
+</g>
+<!-- trades_processed&#45;&gt;aggregate_trades -->
+<g id="edge17" class="edge">
+<title>trades_processed-&gt;aggregate_trades</title>
+<path fill="none" stroke="black" d="M807.99,-224C816.77,-224 825.94,-224 834.94,-224"/>
+<polygon fill="black" stroke="black" points="834.7,-227.5 844.7,-224 834.7,-220.5 834.7,-227.5"/>
+</g>
+<!-- trades_raw -->
+<g id="node14" class="node">
+<title>trades_raw</title>
+<path fill="none" stroke="black" d="M514.79,-242C514.79,-244.21 497.44,-246 476.08,-246 454.73,-246 437.38,-244.21 437.38,-242 437.38,-242 437.38,-206 437.38,-206 437.38,-203.79 454.73,-202 476.08,-202 497.44,-202 514.79,-203.79 514.79,-206 514.79,-206 514.79,-242 514.79,-242"/>
+<path fill="none" stroke="black" d="M514.79,-242C514.79,-239.79 497.44,-238 476.08,-238 454.73,-238 437.38,-239.79 437.38,-242"/>
+<text text-anchor="start" x="445.38" y="-224.4" font-family="Times,serif" font-size="14.00">trades_raw</text>
+<text text-anchor="start" x="470.8" y="-214" font-family="Times,serif" font-size="10.00">S3</text>
+</g>
+<!-- trades_raw&#45;&gt;process_trades -->
+<g id="edge19" class="edge">
+<title>trades_raw-&gt;process_trades</title>
+<path fill="none" stroke="black" d="M515.06,-224C525.19,-224 536.38,-224 547.38,-224"/>
+<polygon fill="black" stroke="black" points="547.19,-227.5 557.19,-224 547.19,-220.5 547.19,-227.5"/>
+</g>
+<!-- aggregate_trades&#45;&gt;trades_aggregated -->
+<g id="edge1" class="edge">
+<title>aggregate_trades-&gt;trades_aggregated</title>
+<path fill="none" stroke="black" d="M957.67,-224C965.46,-224 973.57,-224 981.6,-224"/>
+<polygon fill="black" stroke="black" points="981.35,-227.5 991.35,-224 981.35,-220.5 981.35,-227.5"/>
+</g>
+<!-- analytics_raw -->
+<g id="node16" class="node">
+<title>analytics_raw</title>
+<path fill="none" stroke="black" d="M1099.06,-335C1099.06,-337.21 1078.05,-339 1052.19,-339 1026.33,-339 1005.32,-337.21 1005.32,-335 1005.32,-335 1005.32,-299 1005.32,-299 1005.32,-296.79 1026.33,-295 1052.19,-295 1078.05,-295 1099.06,-296.79 1099.06,-299 1099.06,-299 1099.06,-335 1099.06,-335"/>
+<path fill="none" stroke="black" d="M1099.06,-335C1099.06,-332.79 1078.05,-331 1052.19,-331 1026.33,-331 1005.32,-332.79 1005.32,-335"/>
+<text text-anchor="start" x="1013.32" y="-317.4" font-family="Times,serif" font-size="14.00">analytics_raw</text>
+<text text-anchor="start" x="1039.97" y="-307" font-family="Times,serif" font-size="10.00">Kafka</text>
+</g>
+<!-- analytics_raw&#45;&gt;process_analytics -->
+<g id="edge2" class="edge">
+<title>analytics_raw-&gt;process_analytics</title>
+<path fill="none" stroke="black" d="M1099.51,-316.38C1110.81,-316.23 1123.15,-316.07 1135.24,-315.91"/>
+<polygon fill="black" stroke="black" points="1135.25,-319.41 1145.21,-315.78 1135.16,-312.41 1135.25,-319.41"/>
+</g>
+<!-- analytics_processed -->
+<g id="node18" class="node">
+<title>analytics_processed</title>
+<path fill="none" stroke="black" d="M1425.81,-335C1425.81,-337.21 1397.13,-339 1361.83,-339 1326.53,-339 1297.85,-337.21 1297.85,-335 1297.85,-335 1297.85,-299 1297.85,-299 1297.85,-296.79 1326.53,-295 1361.83,-295 1397.13,-295 1425.81,-296.79 1425.81,-299 1425.81,-299 1425.81,-335 1425.81,-335"/>
+<path fill="none" stroke="black" d="M1425.81,-335C1425.81,-332.79 1397.13,-331 1361.83,-331 1326.53,-331 1297.85,-332.79 1297.85,-335"/>
+<text text-anchor="start" x="1305.85" y="-317.4" font-family="Times,serif" font-size="14.00">analytics_processed</text>
+<text text-anchor="start" x="1340.45" y="-307" font-family="Times,serif" font-size="10.00">Snowflake</text>
+</g>
+<!-- process_analytics&#45;&gt;analytics_processed -->
+<g id="edge9" class="edge">
+<title>process_analytics-&gt;analytics_processed</title>
+<path fill="none" stroke="black" d="M1262,-315.73C1269.85,-315.83 1278,-315.93 1286.11,-316.04"/>
+<polygon fill="black" stroke="black" points="1285.96,-319.54 1296,-316.17 1286.05,-312.54 1285.96,-319.54"/>
+</g>
+</g>
+</svg>
