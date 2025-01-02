@@ -2,7 +2,7 @@
 
 **Easy, Beautiful Lineage**
 
-Pin metadata to Scala objects, get beautiful Graphviz DOT diagrams. ~~Doc-as-code~~ Your code is the doc 📌✨
+Pin metadata to Scala objects, get beautiful Graphviz [DOT](https://graphviz.org/doc/info/lang.html) diagrams. ~~Doc-as-code~~ Your code is the doc 📌✨
 
 
 ### `@pin` options
@@ -15,7 +15,7 @@ Pin metadata to Scala objects, get beautiful Graphviz DOT diagrams. ~~Doc-as-cod
 | version | String | Version of the pin | `"1.0.0"` |
 | tags | Set[String] | Tags for grouping/filtering | `Set("etl", "data")` |
 | upstream | Set[String] | Dependencies on other pins | `Set("raw_data")` |
-| graphOptions | Map[String,String] | GraphViz node attributes | `Map("shape" -> "cylinder")` |
+| dotOptions | Map[String,String] | GraphViz node attributes | `Map("shape" -> "cylinder")` |
 | subgraph | Option[String] | Parent subgraph name | `Some("pipeline")` |
 
 ### `@subgraph` options
@@ -25,6 +25,6 @@ Pin metadata to Scala objects, get beautiful Graphviz DOT diagrams. ~~Doc-as-cod
 | name | String | Unique identifier | `"pipeline"` |
 | label | Option[String] | Display label | `Some("Data Pipeline")` |
 | upstream | Set[String] | Dependencies on other nodes | `Set("other_graph")` |
-| graphOptions | Map[String,String] | GraphViz cluster attributes | `Map("style" -> "filled")` |
+| dotOptions | Map[String,String] | GraphViz cluster attributes | `Map("style" -> "filled")` |
 | parent | Option[String] | Parent subgraph for nesting | `Some("parent_graph")` |
 
