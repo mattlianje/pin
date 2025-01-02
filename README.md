@@ -64,7 +64,6 @@ Stick `@pin` and/or `@subgraph` decorators in your Scala code. Compile it, get a
 
 ## Real-World Example
 <img src="pix/pin-real-world-lr.svg">
-<img src="pix/pin-real-world.svg">
 
 This represents a synthetic production codebase. You have a bunch of data-models mapped to storage engines, and processing functions.
 
