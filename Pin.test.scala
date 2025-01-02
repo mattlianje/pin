@@ -352,4 +352,38 @@ class PinTest extends munit.FunSuite {
 
     println(core.dot)
   }
+
+  test("README demo") {
+    `@subgraph`("data", label = Some("Data Org"))
+    `@subgraph`("infra", label = Some("Infra Team"), parent = Some("data"))
+    `@pin`(
+      "customer_db",
+      description = Some("Postgres"),
+      dotOptions = Map("shape" -> "cylinder"),
+      subgraph = Some("infra")
+    ) {}
+    case class Data(values: List[Int])
+
+    `@pin`(
+      "analyze",
+      schedule = Some("hourly"),
+      upstream = Set("customer_db"),
+      subgraph = Some("data")
+    ) {}
+    def analyze(d: Data): Stats = ???
+
+    `@pin`(
+      "insights_db",
+      description = Some("Snowflake"),
+      upstream = Set("analyze"),
+      dotOptions = Map(
+        "shape" -> "cylinder",
+        "style" -> "filled",
+        "fillcolor" -> "lightgreen"
+      ),
+      subgraph = Some("data")
+    ) {}
+    case class Stats(mean: Double)
+    println(core.dot)
+  }
 }

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="348pt" height="150pt" viewBox="0.00 0.00 347.63 150.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 146)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-146 343.63,-146 343.63,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_data</title>
+<polygon fill="none" stroke="black" points="8,-8 8,-134 331.63,-134 331.63,-8 8,-8"/>
+<text text-anchor="middle" x="169.81" y="-117.4" font-family="Times,serif" font-size="14.00">Data Org</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_infra</title>
+<polygon fill="none" stroke="black" points="16,-16 16,-101 120.32,-101 120.32,-16 16,-16"/>
+<text text-anchor="middle" x="68.16" y="-84.4" font-family="Times,serif" font-size="14.00">Infra Team</text>
+</g>
+<!-- customer_db -->
+<g id="node1" class="node">
+<title>customer_db</title>
+<path fill="none" stroke="black" d="M112.32,-64C112.32,-66.21 92.52,-68 68.16,-68 43.79,-68 24,-66.21 24,-64 24,-64 24,-28 24,-28 24,-25.79 43.79,-24 68.16,-24 92.52,-24 112.32,-25.79 112.32,-28 112.32,-28 112.32,-64 112.32,-64"/>
+<path fill="none" stroke="black" d="M112.32,-64C112.32,-61.79 92.52,-60 68.16,-60 43.79,-60 24,-61.79 24,-64"/>
+<text text-anchor="start" x="32" y="-46.4" font-family="Times,serif" font-size="14.00">customer_db</text>
+<text text-anchor="start" x="51.21" y="-36" font-family="Times,serif" font-size="10.00">Postgres</text>
+</g>
+<!-- analyze -->
+<g id="node3" class="node">
+<title>analyze</title>
+<polygon fill="none" stroke="black" points="207.06,-64 148.32,-64 148.32,-28 207.06,-28 207.06,-64"/>
+<text text-anchor="start" x="156.32" y="-46.4" font-family="Times,serif" font-size="14.00">analyze</text>
+<text text-anchor="start" x="164.64" y="-36" font-family="Times,serif" font-style="italic" font-size="10.00" fill="#ff69b4">hourly</text>
+</g>
+<!-- customer_db&#45;&gt;analyze -->
+<g id="edge2" class="edge">
+<title>customer_db-&gt;analyze</title>
+<path fill="none" stroke="black" d="M112.59,-46C120.48,-46 128.69,-46 136.49,-46"/>
+<polygon fill="black" stroke="black" points="136.4,-49.5 146.4,-46 136.4,-42.5 136.4,-49.5"/>
+</g>
+<!-- insights_db -->
+<g id="node2" class="node">
+<title>insights_db</title>
+<path fill="lightgreen" stroke="black" d="M323.63,-64C323.63,-66.21 305.57,-68 283.35,-68 261.12,-68 243.06,-66.21 243.06,-64 243.06,-64 243.06,-28 243.06,-28 243.06,-25.79 261.12,-24 283.35,-24 305.57,-24 323.63,-25.79 323.63,-28 323.63,-28 323.63,-64 323.63,-64"/>
+<path fill="none" stroke="black" d="M323.63,-64C323.63,-61.79 305.57,-60 283.35,-60 261.12,-60 243.06,-61.79 243.06,-64"/>
+<text text-anchor="start" x="251.06" y="-46.4" font-family="Times,serif" font-size="14.00">insights_db</text>
+<text text-anchor="start" x="261.96" y="-36" font-family="Times,serif" font-size="10.00">Snowflake</text>
+</g>
+<!-- analyze&#45;&gt;insights_db -->
+<g id="edge1" class="edge">
+<title>analyze-&gt;insights_db</title>
+<path fill="none" stroke="black" d="M207.29,-46C214.7,-46 222.91,-46 231.11,-46"/>
+<polygon fill="black" stroke="black" points="231.08,-49.5 241.08,-46 231.08,-42.5 231.08,-49.5"/>
+</g>
+</g>
+</svg>
