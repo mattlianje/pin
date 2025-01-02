@@ -4,6 +4,10 @@
 
 Pin metadata to Scala objects, get beautiful Graphviz [DOT](https://graphviz.org/doc/info/lang.html) diagrams. ~~Doc-as-code~~ Your code is the doc 📌✨
 
+- Step 1: Add `@pin`s to your Scala code
+
+Compile it, get a Graphviz diagram. One step, that's it.
+
 
 ### `@pin` options
 
