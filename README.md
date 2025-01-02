@@ -38,3 +38,4 @@ Stick `@pin` and/or `@subgraph` decorators in your Scala code. Compile it, get a
 
 ## Real-World Example
 <img src="pix/pin-real-world-lr.svg">
+<img src="pix/pin-real-world.svg">
