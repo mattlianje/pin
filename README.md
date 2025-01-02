@@ -4,12 +4,16 @@
 
 Pin metadata to Scala objects, get beautiful Graphviz [DOT](https://graphviz.org/doc/info/lang.html) diagrams. ~~Doc-as-code~~ Your code is the doc 📌✨
 
-- Step 1: Add `@pin`s to your Scala code
+## Features
+- Decorate any Scala object, class or val with zero overhead
+- Automatic subgraph nesting and cross-graph dependencies
+- Drop Pin.scala into your project and start documenting
+- Rich GraphViz options for shapes, colors, and styling
 
-Compile it, get a Graphviz diagram. One step, that's it.
+## Core Concepts
+Add `@pin`s / `@subgraph`s to your Scala code. Compile it, get a Graphviz diagram. One step, that's it.
 
-
-### `@pin` options
+## `@pin` options
 
 | Option | Type | Description | Example |
 |--------|------|-------------|---------|
@@ -22,7 +26,7 @@ Compile it, get a Graphviz diagram. One step, that's it.
 | dotOptions | Map[String,String] | GraphViz node attributes | `Map("shape" -> "cylinder")` |
 | subgraph | Option[String] | Parent subgraph name | `Some("pipeline")` |
 
-### `@subgraph` options
+## `@subgraph` options
 
 | Option | Type | Description | Example |
 |--------|------|-------------|---------|
