@@ -73,7 +73,6 @@ Drop a few pins, and you have the beautiful GraphViz above.
 ```scala
 import pin.core._
 
-sealed trait Workflow
 sealed trait DataModel
 
 val CYLINDER_STYLE = Map("shape" -> "cylinder")
