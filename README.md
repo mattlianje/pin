@@ -71,6 +71,8 @@ Developers will often work on one part, without knowing what goes on in the othe
 
 Drop a few pins, and you have the beautiful GraphViz above.
 ```scala
+import pin.core._
+
 sealed trait Workflow
 sealed trait DataModel
 
