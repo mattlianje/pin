@@ -65,11 +65,12 @@ Stick `@pin` and/or `@subgraph` decorators in your Scala code. Compile it, get a
 ## Real-World Example
 <img src="pix/pin-real-world-lr.svg">
 
-This represents a synthetic med/large production codebase. You have a bunch of data-models mapped to storage engines, and processing functions.
+This represents a synthetic med/large production codebase. You have a bunch of data-models mapped to storage engines
+(more or less explicitly), and processing functions.
 
 Developers will often work on one part, without knowing what goes on in the others.
 
-Drop a few pins, and you have the beautiful GraphViz above.
+Drop a few pins, and you have the beautiful diagram above of your entire Org's dataflow.
 ```scala
 import pin.core._
 
