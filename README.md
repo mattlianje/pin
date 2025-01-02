@@ -10,6 +10,21 @@ Pin metadata to Scala objects, get beautiful GraphViz [DOT](https://graphviz.org
 - Drop **Pin.scala** into your project and start documenting
 - Rich GraphViz options for shapes, colors, and styling
 
+```scala
+`@subgraph`("data", label = Some("Data Org"))
+`@subgraph`("infra", label = Some("Infra Team"), parent=Some("data"))
+
+`@pin`("customer_db", description = Some("Postgres"), dotOptions = Map("shape" -> "cylinder"), subgraph=Some("infra")){}
+case class Data(values: List[Int])
+
+`@pin`("analyze", schedule = Some("hourly"), upstream = Set("customer_db"), subgraph=Some("data")){}
+def analyze(d: Data): Stats = ???
+
+`@pin`("insights_db", description = Some("Snowflake"), upstream = Set("analyze"),
+       dotOptions = Map("shape" -> "cylinder", "style"-> "filled", "fillcolor" -> "lightgreen"),
+       subgraph=Some("data")){}
+case class Stats(mean: Double)
+```
 ## Core Concepts
 Stick `@pin` and/or `@subgraph` decorators in your Scala code. Compile it, get a Graphviz diagram. One step, that's it.
 
@@ -38,3 +53,4 @@ Stick `@pin` and/or `@subgraph` decorators in your Scala code. Compile it, get a
 
 ## Real-World Example
 <img src="pix/pin-real-world-lr.svg">
+<img src="pix/pin-real-world.svg">
