@@ -65,7 +65,7 @@ Stick `@pin` and/or `@subgraph` decorators in your Scala code. Compile it, get a
 ## Real-World Example
 <img src="pix/pin-real-world-lr.svg">
 
-This represents a synthetic production codebase. You have a bunch of data-models mapped to storage engines, and processing functions.
+This represents a synthetic med/large production codebase. You have a bunch of data-models mapped to storage engines, and processing functions.
 
 Developers will often work on one part, without knowing what goes on in the others.
 
