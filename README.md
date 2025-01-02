@@ -18,7 +18,7 @@ Pin metadata to Scala objects, get beautiful Graphviz DOT diagrams. ~~Doc-as-cod
 | graphOptions | Map[String,String] | GraphViz node attributes | `Map("shape" -> "cylinder")` |
 | subgraph | Option[String] | Parent subgraph name | `Some("pipeline")` |
 
-# `@subgraph` options
+### `@subgraph` options
 
 | Option | Type | Description | Example |
 |--------|------|-------------|---------|
