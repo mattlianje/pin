@@ -7,7 +7,7 @@ Pin metadata to Scala objects, get beautiful Graphviz [DOT](https://graphviz.org
 ## Features
 - Decorate any Scala object, class or val with zero overhead
 - Automatic subgraph nesting and cross-graph dependencies
-- Drop Pin.scala into your project and start documenting
+- Drop **Pin.scala** into your project and start documenting
 - Rich GraphViz options for shapes, colors, and styling
 
 ## Core Concepts
