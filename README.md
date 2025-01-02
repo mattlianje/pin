@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="pix/pin_with_github.png" width="300" alt="pin logo">
+</p>
+
 # <img src="pix/pin.png" width="50"> pin _(𝛼)_
 
 **Easy, Beautiful Lineage**
