@@ -30,6 +30,7 @@ case class Stats(mean: Double)
 ```
 
 Generates this DOT:
+
 <img src="pix/pin-example.svg">
 
 ## Core Concepts
