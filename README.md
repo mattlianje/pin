@@ -21,15 +21,17 @@ import pin.core._
 `@subgraph`("data", label = Some("Data Org"))
 `@subgraph`("infra", label = Some("Infra Team"), parent=Some("data"))
 
-`@pin`("customer_db", description = Some("Postgres"), dotOptions = Map("shape" -> "cylinder"), subgraph=Some("infra")){}
+`@pin`("customer_db", description = Some("Postgres"),
+       dotOptions = Map("shape" -> "cylinder"), subgraph=Some("infra"))
 case class Data(values: List[Int])
 
-`@pin`("analyze", schedule = Some("hourly"), upstream = Set("customer_db"), subgraph=Some("data")){}
+`@pin`("analyze", schedule = Some("hourly"),
+       upstream = Set("customer_db"), subgraph=Some("data"))
 def analyze(d: Data): Stats = ???
 
 `@pin`("insights_db", description = Some("Snowflake"), upstream = Set("analyze"),
        dotOptions = Map("shape" -> "cylinder", "style"-> "filled", "fillcolor" -> "lightgreen"),
-       subgraph=Some("data")){}
+       subgraph=Some("data"))
 case class Stats(mean: Double)
 ```
 
