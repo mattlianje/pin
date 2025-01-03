@@ -10,6 +10,7 @@ Part of [d4s](https://github.com/mattlianje/d4s)
 
 ## Features
 - Decorate any Scala object, class or val with zero overhead
+- Zero-dependency, macro-free
 - Automatic subgraph nesting and cross-graph dependencies
 - Drop **Pin.scala** into your project and start documenting
 - Rich GraphViz options for shapes, colors, and styling
