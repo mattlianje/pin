@@ -67,7 +67,8 @@ Stick `@pin` and/or `@subgraph` decorators in your Scala code. Compile it, get a
 <img src="pix/pin-real-world-lr.svg">
 
 This represents a synthetic med/large production codebase. You have a bunch of data-models mapped to storage engines
-(more or less explicitly), and processing functions scattered across modules.
+(more or less explicitly), and processing functions scattered across modules whose entrypoints get triggered
+by some external workflow scheduler.
 
 Developers will often work on one part, without knowing what goes on in the others.
 
