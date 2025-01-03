@@ -79,8 +79,6 @@ Drop a few pins, and you have the beautiful diagram above of your org's entire d
 ```scala
 import pin.core._
 
-sealed trait DataModel
-
 val CYLINDER_STYLE = Map("shape" -> "cylinder")
 val BOX_STYLE = Map("style" -> "filled", "fillcolor" -> "lightskyblue2")
 
