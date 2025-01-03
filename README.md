@@ -22,7 +22,7 @@ import pin.core._
 `@subgraph`(name = "infra", label = "Infra Team", parent = "data")
 
 `@pin`(name = "customer_db",
-       description = "Postgres", dotOptions = Map("shape" -> "cylinder"), subgraph= "infra")
+       description = "Postgres", dotOptions = Map("shape" -> "cylinder"), subgraph = "infra")
 case class Data(values: List[Int])
 
 `@pin`(name = "analyze", schedule = "hourly",
