@@ -72,7 +72,7 @@ by some external workflow scheduler.
 
 Developers will often work on one part, without knowing what goes on in the others.
 
-Drop a few pins, and you have the beautiful diagram above of your org's dataflow.
+Drop a few pins, and you have the beautiful diagram above of your org's entire dataflow.
 ```scala
 import pin.core._
 
