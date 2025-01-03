@@ -18,20 +18,20 @@ This code
 ```scala
 import pin.core._
 
-`@subgraph`("data", label = Some("Data Org"))
-`@subgraph`("infra", label = Some("Infra Team"), parent=Some("data"))
+`@subgraph`(name = "data", label = "Data Org")
+`@subgraph`(name = "infra", label = "Infra Team", parent = "data")
 
-`@pin`("customer_db", description = Some("Postgres"),
-       dotOptions = Map("shape" -> "cylinder"), subgraph=Some("infra"))
+`@pin`(name = "customer_db",
+       description = "Postgres", dotOptions = Map("shape" -> "cylinder"), subgraph= "infra")
 case class Data(values: List[Int])
 
-`@pin`("analyze", schedule = Some("hourly"),
-       upstream = Set("customer_db"), subgraph=Some("data"))
+`@pin`(name = "analyze", schedule = "hourly",
+       upstream = Set("customer_db"), subgraph= "data")
 def analyze(d: Data): Stats = ???
 
-`@pin`("insights_db", description = Some("Snowflake"), upstream = Set("analyze"),
+`@pin`(name = "insights_db", description = "Snowflake", upstream = Set("analyze"),
        dotOptions = Map("shape" -> "cylinder", "style"-> "filled", "fillcolor" -> "lightgreen"),
-       subgraph=Some("data"))
+       subgraph = "data")
 case class Stats(mean: Double)
 ```
 
