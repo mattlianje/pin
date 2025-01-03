@@ -26,7 +26,7 @@ import pin.core._
 case class Data(values: List[Int])
 
 `@pin`(name = "analyze", schedule = "hourly",
-       upstream = Set("customer_db"), subgraph= "data")
+       upstream = Set("customer_db"), subgraph = "data")
 def analyze(d: Data): Stats = ???
 
 `@pin`(name = "insights_db", description = "Snowflake", upstream = Set("analyze"),
