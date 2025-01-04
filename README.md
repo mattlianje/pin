@@ -91,7 +91,7 @@ val BOX_STYLE = Map("style" -> "filled", "fillcolor" -> "lightskyblue2")
  * DATA MODELS
  */
 `@pin`("trades_raw", description = Some("S3"), dotOptions = CYLINDER_STYLE, subgraph = Some("trading")) {}
-case class TradeData(timestamp: Long, symbol: String, price: Double, quantity: Int) extends DataModel
+case class TradeData(timestamp: Long, symbol: String, price: Double, quantity: Int)
 
 `@pin`("trades_processed", description = Some("S3"), dotOptions = CYLINDER_STYLE, subgraph = Some("trading"), upstream = Set("process_trades")) {}
 case class ProcessedTradeData(data: TradeData)
@@ -100,7 +100,7 @@ case class ProcessedTradeData(data: TradeData)
 case class AggregatedTradeData(data: TradeData)
 
 `@pin`("market_feed", description = Some("Kafka"), dotOptions = CYLINDER_STYLE, subgraph = Some("market")) {}
-case class MarketData(symbol: String, bid: Double, ask: Double, timestamp: Long) extends DataModel
+case class MarketData(symbol: String, bid: Double, ask: Double, timestamp: Long)
 
 `@pin`("market_processed", description = Some("S3"), dotOptions = CYLINDER_STYLE, subgraph = Some("market"), upstream = Set("ingest_market")) {}
 case class ProcessedMarketData(data: MarketData)
@@ -109,7 +109,7 @@ case class ProcessedMarketData(data: MarketData)
 case class MarketAnalytics(data: MarketData)
 
 `@pin`("ref_api", description = Some("REST"), dotOptions = CYLINDER_STYLE, subgraph = Some("reference")) {}
-case class ReferenceData(symbol: String, cusip: String, sedol: String) extends DataModel
+case class ReferenceData(symbol: String, cusip: String, sedol: String)
 
 `@pin`("ref_raw", description = Some("S3"), dotOptions = CYLINDER_STYLE, subgraph = Some("reference"), upstream = Set("fetch_ref")) {}
 case class RawReferenceData(data: ReferenceData)
@@ -118,7 +118,7 @@ case class RawReferenceData(data: ReferenceData)
 case class ProcessedReferenceData(data: ReferenceData)
 
 `@pin`("analytics_raw", description = Some("Kafka"), dotOptions = CYLINDER_STYLE, subgraph = Some("analytics")) {}
-case class AnalyticsData(symbol: String, metrics: Map[String, Double]) extends DataModel
+case class AnalyticsData(symbol: String, metrics: Map[String, Double])
 
 `@pin`("analytics_processed", description = Some("Snowflake"), dotOptions = CYLINDER_STYLE, subgraph = Some("analytics"), upstream = Set("process_analytics")) {}
 case class ProcessedAnalyticsData(data: AnalyticsData)
