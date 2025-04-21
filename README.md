@@ -2,7 +2,7 @@
   <img src="pix/pin_with_github.png" width="300" alt="pin logo">
 </p>
 
-# Pin _(experimental)_
+# Pin
 **Easy, Beautiful Lineage**
 
 Pin metadata to Scala objects, get beautiful GraphViz [DOT](https://graphviz.org/doc/info/lang.html) diagrams. ~~Doc-as-code~~ Your code is the doc 📌✨
