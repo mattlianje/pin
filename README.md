@@ -6,7 +6,7 @@
 **Easy, Beautiful Lineage**
 
 Pin metadata to Scala objects, get beautiful GraphViz [DOT](https://graphviz.org/doc/info/lang.html) diagrams. ~~Doc-as-code~~ Your code is the doc 📌✨
-Part of [d4s](https://github.com/mattlianje/d4s)
+Part of [d4](https://github.com/mattlianje/d4)
 
 ## Features
 - Decorate any Scala object, class or val with zero overhead
